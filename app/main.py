@@ -31,6 +31,11 @@ app.add_middleware(SlowAPIMiddleware)
 # Routers
 app.include_router(router)
 
+
+@app.get("/health", tags=["health"])
+def health():
+    return {"status": "ok"}
+
 # Exception handlers
 app.add_exception_handler(RequestValidationError, validation_exception_handler)
 app.add_exception_handler(RateLimitExceeded, rate_limit_exceeded_handler)
