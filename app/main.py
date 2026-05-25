@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+from app.api.v1.router import router
 
+app = FastAPI(title="Hex Contact API")
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+app.include_router(router)
