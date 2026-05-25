@@ -2,6 +2,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     "en": {
         "contact.success": "Your message has been sent successfully.",
         "contact.error": "Failed to send email.",
+        "rate_limit.exceeded": "Too many requests. Please try again later.",
         "validation.missing": "This field is required.",
         "validation.string_type": "This field must be a string.",
         "validation.email": "Invalid email address.",
@@ -10,6 +11,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     "fr": {
         "contact.success": "Votre message a bien été envoyé.",
         "contact.error": "Erreur lors de l'envoi de l'email.",
+        "rate_limit.exceeded": "Trop de requêtes. Veuillez réessayer plus tard.",
         "validation.missing": "Ce champ est obligatoire.",
         "validation.string_type": "Ce champ doit être une chaîne de caractères.",
         "validation.email": "Adresse email invalide.",
