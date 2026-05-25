@@ -8,4 +8,5 @@ dependencies = [
     "fastapi-mail>=1.6.4",
     "fastapi[standard]>=0.136.3",
     "pydantic-settings>=2.14.1",
+    "slowapi>=0.1.9",
 ]
