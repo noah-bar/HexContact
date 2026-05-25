@@ -7,6 +7,7 @@ class Env(BaseSettings):
     smtp_username: str
     smtp_password: str
     mail_to_contact: str
+    cors_origins: list[str] = ["*"]
 
     model_config = {"env_file": ".env"}
 
