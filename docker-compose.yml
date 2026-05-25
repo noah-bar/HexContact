@@ -1,15 +1,10 @@
 services:
   api:
-    build:
-      context: .
-      network: host
+    build: .
     ports:
       - "${PORT:-8000}:8000"
     env_file:
       - .env
-    dns:
-      - 8.8.8.8
-      - 1.1.1.1
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
