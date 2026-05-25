@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[oc]
+*.pyd
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# uv
+.uv/
+
+# Variables d'environnement
+.env
+.env.*
+!.env.example
+
+# IDE - JetBrains (PyCharm, etc.)
+.idea/
+
+# IDE - VS Code
+.vscode/
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Tests & couverture
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Logs
+*.log
+logs/
