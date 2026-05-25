@@ -13,3 +13,5 @@ class ContactForm(BaseModel):
     email: EmailStr
     company: str | None = Field(default=None, max_length=150)
     message: str | None = Field(default=None, max_length=2000)
+    # Honeypot — must remain empty; bots fill it automatically
+    website: str | None = Field(default=None, exclude=True)

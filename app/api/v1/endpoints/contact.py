@@ -20,6 +20,11 @@ async def contact(
     accept_language: str | None = Header(default=None),
 ):
     locale = get_locale(accept_language)
+
+    # Honeypot: silently reject bots that fill the hidden field
+    if form.website:
+        return {"message": t("contact.success", locale)}
+
     try:
         await send_contact_email(
             last_name=form.last_name,
