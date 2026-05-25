@@ -16,7 +16,13 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
 
-app = FastAPI(title="Hex Contact API")
+_is_production = env.environment == "production"
+
+app = FastAPI(
+    title="Hex Contact API",
+    docs_url=None if _is_production else "/docs",
+    redoc_url=None if _is_production else "/redoc",
+)
 
 # Middleware
 app.add_middleware(
